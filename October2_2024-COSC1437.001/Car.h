@@ -33,5 +33,7 @@ public:
 	Car(string, string, int); 
 
 	bool isSameCar(Car);
+
+	void print(); 
 };
 

@@ -7,7 +7,6 @@
 
 using std::cout; 
 
-
 int main()
 {
     Car myCar{ "Honda", "Civic", 161'500 };
@@ -15,7 +14,8 @@ int main()
 
     Car someDefaultCar{};
 
-    cout << "Make, model, and miles of defaultCar: \n"; 
-    someDefaultCar.printCarDetails(); 
+    //cout << "Make, model, and miles of defaultCar: \n"; 
+    someDefaultCar.print(); 
+    
 
 }

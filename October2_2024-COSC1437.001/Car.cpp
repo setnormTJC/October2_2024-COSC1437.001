@@ -2,6 +2,10 @@
 
 #include"iostream" 
 
+#include"iomanip"
+
+using std::cout; 
+using std::setprecision; 
 
 
 void Car::setMilesDriven(int clientSpecifiedMileage)
@@ -21,6 +25,11 @@ void Car::setCarModel(string clientSpecifiedModel)
 	}
 
 	Car::carModel = clientSpecifiedModel; 
+}
+
+void Car::setCarMake(string userSpecifiedMake)
+{
+	carMake = userSpecifiedMake; 
 }
 
 string Car::getCarMake()
@@ -51,4 +60,16 @@ Car::Car(string clientMake, string clientModel, int clientMiles)
 	carMake = clientMake;
 	Car::carModel = clientModel;
 	Car::milesDriven = clientMiles;
+}
+
+void Car::print()
+{
+
+	cout << "Model: " << carModel << "\n";
+
+	cout << "Make: " << getCarMake() << "\n";
+	
+	cout << "Miles: " << std::fixed << setprecision(1) << milesDriven << "\n"; 
+
+
 }
